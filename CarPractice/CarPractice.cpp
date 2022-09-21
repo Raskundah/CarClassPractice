@@ -2,19 +2,55 @@
 //
 
 #include <iostream>
+#include "Car.hpp"
+#include <string>
 
-int main()
+void DescribeCar(Car toDescribe)
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Make: " << toDescribe.make << ", Model: " << toDescribe.model << ", Number of doors: " << toDescribe.doors << ", Miles per Gallon " << toDescribe.mpg
+        << ", Current mileage: " << toDescribe.mileage << ", Fuel Level " << toDescribe.fuelLevel << "\n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int main()
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+{
+    Car sports;
+    Car Suv;
+    Car muscle;
+
+    sports.make = "Subaru";
+    sports.model = "Impreza";
+    sports.doors = 5;
+    sports.mpg = 100;
+
+    sports.mileage = 0;
+    sports.fuelLevel = 0.87;
+
+    //Next//
+
+    Suv.make = "Land Rover";
+    Suv.model = "4x4";
+    Suv.doors = 5;
+    Suv.mpg = 150;
+
+    Suv.mileage = 10000;
+    Suv.fuelLevel = 1;
+
+    //Next//
+
+    muscle.make = "Dodge";
+    muscle.model = "Charger";
+    muscle.doors = 4;
+    muscle.mpg = 85;
+
+    muscle.mileage = 50000;
+    muscle.fuelLevel = 0;
+
+    DescribeCar(sports);
+    DescribeCar(Suv);
+    DescribeCar(muscle);
+
+}
+
+
